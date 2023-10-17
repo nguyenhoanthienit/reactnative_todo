@@ -8,7 +8,7 @@ const Task = (props) => {
   const itemBg = number % 2 === 0 ? styles.even : styles.odd;
 
   return (
-    <TouchableOpacity>
+    <TouchableOpacity onPress={props.onDeleteTask}>
       <View style={styles.item}>
         <View style={[styles.square, itemBg]}>
           <Text style={styles.number}>{numberText}</Text>
